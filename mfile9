@@ -1,0 +1,16 @@
+function [Y,t]=RungeKutta4(f,a,b,y0,h)
+M=(b-a)/h;
+t(1)=a;
+Y(1)=y0;
+ 
+for k=1:M
+      
+    f1=f(t(k),Y(k));
+    f2=f(t(k)+h/2,Y(k)+h/2*f1);
+    f3=f(t(k)+h/2,Y(k)+h/2*f2);
+    f4=f(t(k)+h,Y(k)+h*f3);
+    
+    t(k+1)=t(k)+h;
+    Y(k+1)=Y(k)+h/6*(f1+2*f2+2*f3+f4);
+ 
+end
