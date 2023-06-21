@@ -1,2 +1,2 @@
 # MetodeNumerik
-### Tentang praktikum metode numerik
+### Tentang MatKul metode numerik
